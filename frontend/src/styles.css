@@ -1,0 +1,167 @@
+/* ===== Color Variables ===== */
+:root {
+  --bg-main: #f6f7fb;
+  --card-bg: #ffffff;
+
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+
+  --text-main: #111827;
+  --text-muted: #6b7280;
+
+  --border-light: #d1d5db;
+}
+
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #eef1f7;
+  color: var(--text-main);
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* slightly softer */
+  margin-bottom: 20px;
+}
+
+/* ===== Inputs ===== */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  background: #ffffff;
+  color: var(--text-main);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ===== Buttons ===== */
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: var(--text-main);
+}
+
+button.secondary:hover {
+  background: #d1d5db;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: var(--danger-hover);
+}
+
+/* ===== Layout ===== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Navbar (Improved Buttons) ===== */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.navbar-links a:hover {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* Button-like logout */
+.logout-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #4338ca;
+}
+
+/* ===== Navbar Button Links ===== */
+.navbar-links a {
+  text-decoration: none;
+  background: #4f46e5;      /* same purple as buttons */
+  color: #ffffff;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;  
+  font-size: 14px;
+}
+
+.navbar-links a:hover {
+  background: #4338ca;      
+  color: #ffffff;
+}
+
